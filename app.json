@@ -1,10 +1,10 @@
 {
     "pages":[
-
-        "pages/index/index",
         "pages/location/location",
-        "pages/second/second",
+        "pages/test/test",
 
+        "pages/second/second",
+        "pages/index/index",
 
 
 

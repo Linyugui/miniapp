@@ -1,0 +1,20 @@
+<view class="body">
+<view class="search-wrapper">
+    <view class="search-section">
+        <view class="search-input-wrapper ">
+            <input  bindconfirm="query" bindfocus="bindFocus" bindblur="bindBlur" class="search-input" placeholder="请输入门店名称" value="{{name}}" confirm-type="search" />
+        </view>
+        <view class="search-button-wrapper">
+            <button class="search-button">查找</button>
+        </view>
+    </view>
+    <view class="navigator-box {{!hiddenDropdown ? 'navigator-box-show' : ''}}">
+        <block wx:for="{{markers}}" wx:key="{{item.id}}">
+            <navigator url="pages/{{page}}/{{page}}" class="navigator">
+                <view class="navigator-text">{{item.title}}</view>
+                <view class="">{{item.distance}}米</view>
+            </navigator>
+        </block>
+    </view>
+</view>
+</view>

@@ -1,23 +1,42 @@
-
-
-        <view class="">
-            <map
+<view class="container">
+    <view class="search-wrapper">
+        <view class="search-section">
+            <view class="search-input-wrapper ">
+                <input bindconfirm="query" bindfocus="bindFocus" bindblur="bindBlur" class="search-input"
+                       placeholder="请输入门店名称" value="{{name}}" confirm-type="search" bindinput="bindInput"/>
+            </view>
+            <view class="search-button-wrapper">
+                <button class="search-button">查找</button>
+            </view>
+        </view>
+        <view class="navigator-box {{!hiddenDropdown ? 'navigator-box-show' : ''}}">
+            <block wx:for="{{markers}}" >
+                <view bindtap="jump" class="navigator">
+                    <view class="navigator-text">{{item.title}}</view>
+                    <view class="">{{item.distance}}米</view>
+                </view>
+            </block>
+            <block>
+                <view bindtap="tapmore" class="navigator">
+                    <view class="navigator-text">查看更多</view>
+                    <view class="navigator-arrow"></view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="map_wrapper">
+        <map
                 class="map"
                 id="map"
-                style="width: 100% ;height: 500rpx"
                 latitude="{{point_latitude}}"
                 longitude="{{point_longitude}}"
                 markers="{{markers}}"
                 bindmarkertap="tap"
                 show-location="true"
                 polyline="{{polyline}}"
-                scale = "{{scale}}"
-            > </map>
-        </view>
-        <view>
-            <text>最近的门店:</text>
-            <view   wx:for="{{nearbyShops}}" >
-                <view id="{{item.id}}" bindtap="jump">{{index}}.{{item.title}}:{{item.distance}}米</view>
-            </view>
-        </view>
+                scale="{{scale}}"
+        ></map>
+    </view>
+</view>
+
 

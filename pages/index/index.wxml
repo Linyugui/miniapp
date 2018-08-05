@@ -1,12 +1,12 @@
 <!--顶部基本信息-->
 <view class="index-hd">
     <view class=" ">
-        <view class="">附近的十个门店信息</view>
+        <view class="">全部{{size}}个门店信息</view>
     </view>
 </view>
 <view class="index-bd">
     <view class="list">
-        <block wx:for-items="{{nearbyShops}}" wx:key="{{item.id}}">
+        <block wx:for-items="{{markers}}" wx:key="{{item.id}}">
             <view class="list-item">
                 <view id="{{item.id}}" class="list-item-hd {{item.open ? 'list-item-hd-show' : ''}}" bindtap="kindToggle">
                     <view class="cell__bd">
