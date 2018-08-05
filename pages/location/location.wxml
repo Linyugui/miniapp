@@ -1,0 +1,23 @@
+
+
+        <view class="">
+            <map
+                class="map"
+                id="map"
+                style="width: 100% ;height: 500rpx"
+                latitude="{{point_latitude}}"
+                longitude="{{point_longitude}}"
+                markers="{{markers}}"
+                bindmarkertap="tap"
+                show-location="true"
+                polyline="{{polyline}}"
+                scale = "{{scale}}"
+            > </map>
+        </view>
+        <view>
+            <text>最近的门店:</text>
+            <view   wx:for="{{nearbyShops}}" >
+                <view id="{{item.id}}" bindtap="jump">{{index}}.{{item.title}}:{{item.distance}}米</view>
+            </view>
+        </view>
+

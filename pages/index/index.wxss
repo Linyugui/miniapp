@@ -1,0 +1,44 @@
+.index-hd {
+    padding: 20rpx 20rpx;
+    text-align: center;
+}
+.index-bd {
+    padding: 0 20rpx 40rpx;
+}
+.index-ft {
+    padding-bottom: 20rpx;
+    text-align: center;
+}
+
+
+.list-item {
+    margin: 20rpx 0;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.list-text{
+    flex: 1;
+}
+.list-item-hd {
+    padding: 20rpx;
+    display: flex;
+    transition: opacity .2s;
+}
+.list-item-hd-show {
+    opacity: .2;
+}
+.cell__bd{
+    width: 70%;
+}
+.cell__ft{
+    margin-top: 9rpx;
+    font-size: 24rpx;
+    overflow: auto;
+}
+
+.cell__lf{
+    width: 30%;
+    margin-right: 10rpx;
+    text-align: right;
+}
